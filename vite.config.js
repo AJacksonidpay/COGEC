@@ -1,9 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
+// Caminho base para GitHub Pages (use o nome do repositório)
 export default defineConfig({
   plugins: [react()],
-  base: '/COGEC/',   // 👈 ESSENCIAL para GitHub Pages
+  base: '/COGEC/', 
+  root: '.', // raiz do projeto
+  build: {
+    outDir: 'dist', // saída da build
+  },
 })
-
