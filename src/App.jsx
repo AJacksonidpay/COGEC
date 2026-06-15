@@ -3,9 +3,27 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
+/**
+ * ⚡ BOLT OPTIMIZATION: State Localization
+ * By extracting the counter into its own component, we localize the state.
+ * Only the Counter component re-renders when the count changes,
+ * preventing the entire App component (and its static assets) from re-rendering.
+ */
+function Counter() {
   const [count, setCount] = useState(0)
+  return (
+    <div className="card">
+      <button onClick={() => setCount((count) => count + 1)}>
+        count is {count}
+      </button>
+      <p>
+        Edit <code>src/App.jsx</code> and save to test HMR
+      </p>
+    </div>
+  )
+}
 
+function App() {
   return (
     <>
       <div>
@@ -17,14 +35,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
+      <Counter />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
