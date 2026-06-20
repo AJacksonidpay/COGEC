@@ -1,4 +1,6 @@
 import { useState } from 'react'
+// The react.svg asset was minified to under 4kb to allow Vite to inline it as a base64 string,
+// saving an additional network request on initial load.
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
