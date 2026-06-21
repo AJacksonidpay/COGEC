@@ -1,4 +1,8 @@
 import { useState } from 'react'
+/**
+ * react.svg has been minified to stay under Vite's default 4096-byte inlining threshold.
+ * This allows it to be bundled as a base64 string, saving a network request.
+ */
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
