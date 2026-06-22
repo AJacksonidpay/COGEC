@@ -1,6 +1,9 @@
 import { useState } from 'react'
+// Bolt ⚡: Optimized assets (SVGs) are minified to fall below Vite's 4KB inlining threshold.
+// Moving viteLogo to src/assets and using relative import allows Vite to inline it as a base64 string,
+// saving an additional network request.
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
