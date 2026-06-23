@@ -1,6 +1,8 @@
 import { useState } from 'react'
+// SVGs are imported from src/assets and minified below 4KB to enable Vite's automatic base64 inlining,
+// reducing the number of network requests and improving load performance.
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
