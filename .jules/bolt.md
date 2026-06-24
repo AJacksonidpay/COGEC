@@ -1,0 +1,3 @@
+## 2026-06-24 - Inline SVG assets by minifying and moving to src
+**Learning:** Vite's default asset inlining threshold is 4096 bytes (4KB). Files in the `public/` directory are never inlined. Minifying assets just above this limit (like `react.svg` at 4126 bytes) and moving assets from `public/` to `src/` (while updating imports) allows them to be bundled as base64 strings in the JS bundle, saving network requests.
+**Action:** Always check asset sizes in the `dist` folder. If an SVG is slightly over 4KB, minify it. If a static asset is in `public/`, consider moving it to `src/assets/` to enable inlining, while keeping a copy in `public/` if it's referenced directly (e.g., as a favicon in `index.html`).
