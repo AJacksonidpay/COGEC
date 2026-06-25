@@ -1,0 +1,3 @@
+## 2025-06-25 - SVG Asset Inlining
+**Learning:** Vite inlines assets smaller than 4096 bytes (4KB) as base64 strings in the JS bundle, saving HTTP requests. Assets in the `public/` directory are never inlined; they must be in the `src/` directory and imported using ESM. If an asset is also needed as a static file (e.g., favicon in `index.html`), referencing it via `/src/assets/...` in `index.html` allows Vite to process it while still inlining ESM imports.
+**Action:** Minify SVGs below 4KB using `svgo` and move them from `public/` to `src/assets/` to leverage automatic inlining. Update `index.html` to point to the `src/assets/` version to avoid redundant copies in `public/`.
