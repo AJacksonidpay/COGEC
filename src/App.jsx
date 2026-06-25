@@ -1,6 +1,7 @@
 import { useState } from 'react'
+// Optimization: Imported from src/assets/ to enable Vite's asset inlining (threshold 4KB)
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
