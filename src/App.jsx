@@ -1,6 +1,8 @@
 import { useState } from 'react'
+// Logos are imported from src/assets and minified under 4KB to enable Vite asset inlining,
+// reducing the number of network requests in the production build.
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
