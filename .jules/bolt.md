@@ -1,0 +1,3 @@
+## 2026-06-29 - Vite Asset Inlining Optimization
+**Learning:** Vite's default asset inlining threshold is 4KB (4096 bytes). Assets in the `public/` directory are always served as static files and never inlined. By minifying SVG assets below the 4KB limit and moving them from `public/` to `src/assets/`, they can be imported as ESM and inlined as base64 strings in the JavaScript bundle, saving network requests.
+**Action:** Always check if small assets (<4KB) in `public/` or `src/assets/` can be minified and moved to enable inlining. Verify inlining by ensuring the file is not present in `dist/assets/` after build (unless referenced in `index.html`).
