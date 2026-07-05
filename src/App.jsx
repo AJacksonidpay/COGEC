@@ -1,6 +1,8 @@
 import { useState } from 'react'
+// Assets are imported from src/assets to enable Vite's asset inlining (threshold < 4KB)
+// This reduces the number of HTTP requests by bundling small assets as base64 in the JS bundle.
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
