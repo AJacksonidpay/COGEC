@@ -1,6 +1,8 @@
 import { useState } from 'react'
+// reactLogo is minified to < 4KB to trigger Vite's automatic base64 inlining
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// viteLogo is moved to src/assets to allow Vite to process and inline it
+import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
