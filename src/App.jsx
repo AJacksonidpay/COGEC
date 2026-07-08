@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// ⚡ Bolt: Moved vite.svg from public/ to src/assets/ to enable Vite processing and inlining
+import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
